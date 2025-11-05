@@ -1,0 +1,73 @@
+<!-- task_01 -->
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product>
+        <id>11</id>
+        <name>Samsung</name>
+        <unit_price>35000</unit_price>
+        <stock>50</stock>
+        <status>1</status>
+    </product>
+    <product>
+        <id>20</id>
+        <name>HTC</name>
+        <unit_price>65300</unit_price>
+        <stock>35</stock>
+        <status>0</status>
+    </product>
+    <product>
+        <id>23</id>
+        <name>Nokia</name>
+        <unit_price>25100</unit_price>
+        <stock>100</stock>
+        <status>1</status>
+    </product>
+</products>
+
+
+<!-- task_02 -->
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student>
+        <sl_no>23</sl_no>
+        <name>John Carter</name>
+        <admission_date>25/12/2015</admission_date>
+    </student>
+    <student>
+        <sl_no>29</sl_no>
+        <name>Bob Marshal</name>
+        <admission_date>13/01/1999</admission_date>
+    </student>
+    <student>
+        <sl_no>35</sl_no>
+        <name>Clark Kent</name>
+        <admission_date>17/06/2005</admission_date>
+    </student>
+</students>
+
+
+<!-- task_03 -->
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    <employee>
+        <id>1</id>
+        <name>John Doe</name>
+        <address>HB #3, RU3, Banani, Dhaka</address>
+        <department>Sales</department>
+        <salary>20000</salary>
+    </employee>
+    <employee>
+        <id>2</id>
+        <name>Mark Zuckerberg</name>
+        <address>Flat #1, Rd #20, R#18, Mirpur, Dhaka</address>
+        <department>Accounts</department>
+        <salary>12000</salary>
+    </employee>
+    <employee>
+        <id>3</id>
+        <name>Ala Vsvxi</name>
+        <address>HB #3, R#3, Motijheel</address>
+        <department>Human Resource</department>
+        <salary>30000</salary>
+    </employee>
+</employees>
