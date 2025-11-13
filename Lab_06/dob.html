@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date of Birth Validation</title>
+  <script>
+    function validateDOB() {
+      const dd = parseInt(document.getElementById("dd").value);
+      const mm = parseInt(document.getElementById("mm").value);
+      const yyyy = parseInt(document.getElementById("yyyy").value);
+
+      if (!dd || !mm || !yyyy) {
+        alert("All fields are required.");
+        return false;
+      }
+      if (dd < 1 || dd > 31 || mm < 1 || mm > 12 || yyyy < 1900 || yyyy > 2016) {
+        alert("Invalid date of birth!");
+        return false;
+      }
+      alert("Date of Birth is valid!");
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <h2>Date of Birth</h2>
+  <form onsubmit="return validateDOB()">
+    <input type="number" id="dd" placeholder="dd">
+    <input type="number" id="mm" placeholder="mm">
+    <input type="number" id="yyyy" placeholder="yyyy"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

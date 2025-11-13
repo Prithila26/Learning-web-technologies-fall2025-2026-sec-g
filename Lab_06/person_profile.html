@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Person Profile</title>
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value.trim();
+      const namePattern = /^[A-Za-z][A-Za-z.\-\s]*$/;
+      if (name === "") {
+        alert("Name cannot be empty.");
+        return false;
+      }
+      const words = name.split(" ");
+      if (words.length < 2) {
+        alert("Name must contain at least two words.");
+        return false;
+      }
+      if (!namePattern.test(name)) {
+        alert("Name must start with a letter and contain only letters, dots, or dashes.");
+        return false;
+      }
+
+      const email = document.getElementById("email").value.trim();
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (email === "") {
+        alert("Email cannot be empty.");
+        return false;
+      }
+      if (!emailPattern.test(email)) {
+        alert("Invalid email format. Example: sample@example.com");
+        return false;
+      }
+
+      const gender = document.querySelector('input[name="gender"]:checked');
+      if (!gender) {
+        alert("Please select a gender.");
+        return false;
+      }
+
+      const dd = parseInt(document.getElementById("dd").value);
+      const mm = parseInt(document.getElementById("mm").value);
+      const yyyy = parseInt(document.getElementById("yyyy").value);
+      if (!dd || !mm || !yyyy) {
+        alert("Date of birth fields cannot be empty.");
+        return false;
+      }
+      if (dd < 1 || dd > 31 || mm < 1 || mm > 12 || yyyy < 1900 || yyyy > 2016) {
+        alert("Invalid date of birth!");
+        return false;
+      }
+
+      const degrees = document.querySelectorAll('input[name="degree"]:checked');
+      if (degrees.length === 0) {
+        alert("Please select at least one degree.");
+        return false;
+      }
+
+      const blood = document.getElementById("blood").value;
+      if (blood === "") {
+        alert("Please select a blood group.");
+        return false;
+      }
+
+      const userId = document.getElementById("userId").value;
+      const picture = document.getElementById("picture").value;
+      if (userId === "" || isNaN(userId) || userId <= 0) {
+        alert("User ID must be a positive number.");
+        return false;
+      }
+      if (picture === "") {
+        alert("Please upload a picture.");
+        return false;
+      }
+
+      alert("✅ All validations passed! Form submitted successfully.");
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <h2>PERSON PROFILE</h2>
+  <form onsubmit="return validateForm()">
+
+    Name: <br>
+    <input type="text" id="name"><br><br>
+
+    Email: <br>
+    <input type="text" id="email"><br><br>
+
+    Gender: <br>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Other"> Other<br><br>
+
+    Date of Birth: <br>
+    <input type="number" id="dd" placeholder="dd">
+    <input type="number" id="mm" placeholder="mm">
+    <input type="number" id="yyyy" placeholder="yyyy"><br><br>
+
+    Degree: <br>
+    <input type="checkbox" name="degree" value="SSC"> SSC
+    <input type="checkbox" name="degree" value="HSC"> HSC
+    <input type="checkbox" name="degree" value="BSc"> BSc<br><br>
+
+    Blood Group: <br>
+    <select id="blood">
+      <option value="">Select</option>
+      <option value="A+">A+</option>
+      <option value="A-">A-</option>
+      <option value="B+">B+</option>
+      <option value="B-">B-</option>
+      <option value="O+">O+</option>
+      <option value="O-">O-</option>
+      <option value="AB+">AB+</option>
+      <option value="AB-">AB-</option>
+    </select><br><br>
+
+    User ID: <br>
+    <input type="number" id="userId"><br><br>
+
+    Picture: <br>
+    <input type="file" id="picture"><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
