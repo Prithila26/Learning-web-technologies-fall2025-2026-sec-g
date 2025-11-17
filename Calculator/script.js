@@ -50,6 +50,15 @@ function calculate() {
     const current = parseFloat(currentValue);
     let result;
 
+    switch (operator) {
+
+        case '+':   
+            result = prev + current;
+            break;
+
+    }
+
+
 
     currentValue = result.toString();
     operator = null;
