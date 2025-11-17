@@ -55,10 +55,20 @@ function calculate() {
         case '+':   
             result = prev + current;
             break;
+        
+        case '-':   
+            result = prev - current;
+            break;
+
+        case '*':   
+            result = prev * current;
+            break;
+
+        case '/':   
+            result = current !== 0 ? prev / current : 'Error';
+            break;
 
     }
-
-
 
     currentValue = result.toString();
     operator = null;
